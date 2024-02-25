@@ -4,10 +4,13 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Login from "./components/Login";
 import Register from "./components/Register";
 import UserManagementTable from "./components/UserManagementTable";
+import { createBrowserHistory } from "history";
 
 function App() {
   return (
-    <Router>
+    <Router
+      history={createBrowserHistory({ basename: process.env.PUBLIC_URL })}
+    >
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/register" element={<Register />} />
