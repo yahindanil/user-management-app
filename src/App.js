@@ -8,9 +8,7 @@ import { createBrowserHistory } from "history";
 
 function App() {
   return (
-    <Router
-      history={createBrowserHistory({ basename: process.env.PUBLIC_URL })}
-    >
+    <Router basename={process.env.PUBLIC_URL}>
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/register" element={<Register />} />
